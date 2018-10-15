@@ -22,6 +22,8 @@ class userHome extends React.Component {
           <p>Solutions right at your doorstep</p>
 
         </div>
+    </div><div class="main-img">
+    <img src="https://i.imgur.com/romvKiG.jpg" />
     </div>
     </Default>
 

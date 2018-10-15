@@ -31,3 +31,8 @@
 h2{
 	margin-bottom: 23px;
 }
+
+.main-img, .main-img img {
+	opacity: 0.8;
+	width: 100%;
+}
