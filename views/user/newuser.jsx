@@ -28,7 +28,7 @@ class NewUser extends React.Component {
                     </select>
                 </div>
                 <div className="user-attribute">
-                  <label>Password</label><input className="field" name="password" type="text" required="required" />
+                  <label>Password</label><input className="field" name="password" type="password" required="required" />
                 </div>
                 <input name="submit" type="submit" />
               </form>
