@@ -37,7 +37,7 @@ class samplesPage extends React.Component {
                             <td>{sample.type} </td>
                             <td>{sample.comments} </td>
                             <td>{sample.logged_by} </td>
-                            <td>{sample.login_date} </td>
+
 
                         <td>
                         <label className="container">
@@ -104,7 +104,7 @@ class samplesPage extends React.Component {
                     <th>Sample Type</th>
                     <th>Comments</th>
                     <th>Logged By</th>
-                    <th>Date Logged</th>
+
                     <th id="edit-col">Edit</th>
                 </tr>
                 {samplePost}
