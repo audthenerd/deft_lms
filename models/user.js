@@ -254,8 +254,14 @@ module.exports = (dbPoolInstance) => {
         dbPoolInstance.query(queryString,(error, queryResult) => {
             console.log("delSample qr", queryResult);
 
+            // dbPoolInstance.query(queryString1,(error, queryResult) =>  {
+
+
+
+            // });
+
             callback(error, queryResult);
-            });
+        });
     };
 
 
