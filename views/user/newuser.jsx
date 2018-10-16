@@ -21,10 +21,9 @@ class NewUser extends React.Component {
                 <div className="user-attribute">
                   <label for="level-list">Permission Level</label>
                     <select className="select-level" name="level">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
+                      <option value="1">1 - Supervisor</option>
+                      <option value="2">2 - Chemist</option>
+                      <option value="3">3 - Technician</option>
                     </select>
                 </div>
                 <div className="user-attribute">

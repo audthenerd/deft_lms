@@ -1,0 +1,1 @@
+INSERT INTO tests (name, test_method, test_manual, user_id, equipment_id, sample_id) VALUES('Absorption', 'Absorption', 'link', 1, 1, 1);

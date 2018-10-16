@@ -441,9 +441,9 @@ module.exports = (db) => {
                 console.error('error getting user:', error);
                 response.sendStatus(500);
 
-                response.render('methods');
+            };
 
-            }
+                response.render('methods', {tests: queryResult.rows});
         })
     };
 
@@ -473,6 +473,7 @@ module.exports = (db) => {
     addSamples,
     assignSamples,
     delSample,
+    testsPage,
     logOut
   };
 };

@@ -275,7 +275,16 @@ module.exports = (dbPoolInstance) => {
 
     const testsPage = (user, callback) => {
 
-          const queryString = `SELECT * FROM equipment WHERE id=${user.id}`;
+
+            console.log('tests users', user);
+
+          const queryString = `SELECT * FROM tests`;
+
+          dbPoolInstance.query(queryString, (error, queryResult) => {
+            // console.log("update equip qr", queryResult);
+
+            callback(error, queryResult);
+        });
     };
 
 
@@ -294,6 +303,7 @@ module.exports = (dbPoolInstance) => {
         editEquipPage,
         updateEquip,
         delSample,
-        assignSamples
+        assignSamples,
+        testsPage
     };
 };

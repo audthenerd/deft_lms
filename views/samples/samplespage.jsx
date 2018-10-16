@@ -39,7 +39,7 @@ class samplesPage extends React.Component {
                             <td>{sample.logged_by} </td>
                             <td>{sample.login_date} </td>
 
-                        <td className="edit-col">
+                        <td>
                         <label className="container">
                             {disCheck}
                         </label>
@@ -63,7 +63,7 @@ class samplesPage extends React.Component {
 
     return (
 
-    <Default title="LMS - Manage Your Samples">
+    <Default title="DEFT - Manage Your Samples">
 
         <div className="main-body">
 
@@ -105,9 +105,9 @@ class samplesPage extends React.Component {
                     <th>Comments</th>
                     <th>Logged By</th>
                     <th>Date Logged</th>
-                    <th>Edit</th>
+                    <th id="edit-col">Edit</th>
                 </tr>
-{samplePost}
+                {samplePost}
             </table>
         </div>
         <script src="/script-samples.js"></script>

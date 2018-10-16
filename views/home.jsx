@@ -18,7 +18,7 @@ class userHome extends React.Component {
         <div className="main-body">
 
           <h1>DEFT</h1>
-          <h2>A Lab Management System</h2>
+          <h2>Lab Management System</h2>
           <p>Solutions right at your doorstep</p>
 
         </div>

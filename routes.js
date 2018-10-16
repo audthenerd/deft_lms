@@ -29,7 +29,7 @@ module.exports = (app, db) => {
   app.delete('/sample/del', users.delSample);
   app.get('/admin/home', users.assignSamples);
   app.get('/profile/:name', users.userProfile);
-  // app.get('/lab/tests', users.testsPage);
+  app.get('/lab/tests', users.testsPage);
   // app.get('/equip/edit', users.editEquipment);
 
 };

@@ -45,7 +45,7 @@ DEFAULT FOR EVERY PAGE
   .sidenav a {font-size: 18px;}
 }
 
-#toOpen {
+button#toOpen {
 	border: none;
 	background-color: transparent;
 	outline: none;
@@ -185,10 +185,21 @@ USERHOME
 
 #refresh-button {
 	position: absolute;
-	top: 401px;
+	top: 468px;
    left: 506px;
 }
 
+div#userhome-assign, div#userhome-h2 {
+	border: 2px solid grey;
+	margin-bottom: 5px;
+	padding: 10px;
+}
+
+div#userhome-assign h2, div#userhome-h2 h2 {
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+	margin-bottom: 20px;
+}
 
 /*******************************************
 H2 WITHIN PAGES
@@ -204,9 +215,8 @@ H2 WITHIN PAGES
 	display: table-cell;
 }
 
-#userhome-h2, #samplespage-h2 {
+#samplespage-h2 {
 	border: 2px solid grey;
-	width:389px;
 	margin-bottom: 0;
 	margin-top: 20px;
 	margin-left: 5px;
@@ -223,6 +233,10 @@ H2 WITHIN PAGES
 }
 
 
+table {
+  table-layout: fixed;
+  width: 800px;
+ }
 
 
 /*******************************************
@@ -259,6 +273,10 @@ ul {
     }
 }
 
+input.sample {
+	width: 171px;
+}
+
 .deletes, .edits {
 	display: none;
 	margin: 5px;
@@ -273,8 +291,9 @@ ul {
 	display: inline-block;
 }
 
-.edit-col {
+th#edit-col {
 	height: 155px;
+	width:150px;
 }
 
 table {
@@ -286,6 +305,21 @@ th, td {
 	padding: 10px;
 }
 
+/*******************************************
+METHODS PAGE
+*******************************************/
+
+input.search-bar {
+	margin: 5px;
+	width: 300px;
+}
+
+
+th#method-name {
+	-webkit-column-width: 100px; /* Chrome, Safari, Opera */
+  -moz-column-width: 100px; /* Firefox */
+	column-width: 300px;
+}
 
 
 

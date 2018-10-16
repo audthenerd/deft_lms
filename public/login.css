@@ -36,3 +36,7 @@ h2{
 	opacity: 0.8;
 	width: 100%;
 }
+
+input.field, select.select-level {
+	margin-left: 10px;
+}
