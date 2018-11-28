@@ -38,6 +38,24 @@ module.exports = (db) => {
         });
    };
 
+    const updateProfile = (request, response) => {
+
+        let cookieName = request.cookies['username'];
+        let cookieLevel = request.cookies['level'];
+        let cookieId = request.cookies['id'];
+
+
+        db.user.updateProfile(request.query.id, (error, queryResult) => {
+
+            if(error) {
+
+                console.error('userhome not loading:', error);
+                response.sendStatus(500);
+            };
+
+            response.render('user/updateprof', {user: queryResult.rows[0], name: cookieName, level: cookieLevel, id: cookieId } );
+        });
+    };
 
 
     const newForm = (request, response) => {
@@ -456,6 +474,7 @@ module.exports = (db) => {
   return {
     newForm,
     userProfile,
+    updateProfile,
     create,
     userHome,
     loginForm,

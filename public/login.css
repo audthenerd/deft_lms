@@ -35,6 +35,8 @@ h2{
 .main-img, .main-img img {
 	opacity: 0.8;
 	width: 100%;
+	position: absolute;
+  top: 231px;
 }
 
 input.field, select.select-level {

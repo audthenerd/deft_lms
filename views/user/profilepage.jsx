@@ -6,7 +6,7 @@ class profilePage extends React.Component {
 
   render() {
 
-      console.log("profile-props:", this.props.user.id);
+      console.log("profile-props:", this.props);
       console.log("cookie-props:", this.props.id);
 
       // console.log("userhome-cookie", response.cookie);
@@ -16,8 +16,8 @@ class profilePage extends React.Component {
     if(this.props.id == this.props.user.id) {
       updateProf = (
         <div id="updateprof">
-        <form className="form-update" action="/profile/update">
-            <input name="id" type="hidden" value={this.props.id} />
+        <form className="form-update" action={"/profile/"+this.props.user.username+"/update"}>
+            <input name="id" hidden="hidden" value={this.props.user.id} />
             <input id={"U"+this.props.id} type="submit" className="updates" value="Update Your Profile"/>
         </form>
       </div>

@@ -24,6 +24,23 @@ module.exports = (dbPoolInstance) => {
 
     };
 
+
+    const updateProfile = (user, callback) => {
+
+        console.log("updateprofile user", user);
+
+        const queryString = `SELECT * FROM users WHERE id='${user}' `;
+
+        dbPoolInstance.query(queryString, (error, queryResult) => {
+        // invoke callback function with results after query has executed
+        console.log("updateprof QR", queryResult);
+
+        callback(error, queryResult);
+      });
+
+    };
+
+
     const create = (user, callback) => {
       // run user input password through bcrypt to obtain hashed password
       // console.log("user password at create:", user.username);
@@ -297,6 +314,7 @@ module.exports = (dbPoolInstance) => {
     return {
         create,
         userProfile,
+        updateProfile,
         userHome,
         existing,
         samplesPage,
