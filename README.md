@@ -1,12 +1,21 @@
 # DEFT: A Lab Management System
-This application facilitates the effective management of samples, equipment and associated data. Using this system will allow automated workflows and reproducibility of analysis results.
+Mission: To create a user-friendly platform for laboratories to manage day-to-day operations. 
 
+## What is DEFT?
+DEFT is an open-source application that facilitates the effective management of samples, equipment and associated data. Using this system will allow automated workflows and reproducibility of analysis results.
+
+## Getting Started
 Try it out!
-- On our server: <a href="https://deft-lms.herokuapp.com/">DEFT@Heroku</a>
-- On your own server: See installation instructions below.
+- On us: <a href="https://deft-lms.herokuapp.com/">DEFT@Heroku</a>
+- On your own: Go through the simple steps below:
+```
+git clone https://github.com/audthenerd/deft_lms.git
+cd deft_lms
+node index.js
+```
 
-# Installation
-- Click the "Clone or download" button at the top-right corner of this page and copy the provided repository URL.
-- Type "git clone <repository URL>" into your command line.
-- When cloning is done, go into the deft_lms directory.
-- Type "node index.js" to start the server.
+
+
+
+
+
