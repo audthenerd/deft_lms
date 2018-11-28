@@ -4,6 +4,7 @@ class LoginLayout extends React.Component {
   render() {
 
         console.log("layout", this.props.children);
+        console.log("def-title", this.props.title);
 
 let headerLog;
 
