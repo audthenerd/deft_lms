@@ -10,7 +10,7 @@ DEFT started off as a class project based on <b>React</b>, <b>Express.js</b> and
 
 ## :pencil2: Getting Started
 Try it out!
-- On us: <a href="https://deft-lms.herokuapp.com/">DEFT@Heroku</a>
+- On me: <a href="https://deft-lms.herokuapp.com/">DEFT@Heroku</a>
 - On your own: Go through the simple steps below:
 ```
 git clone https://github.com/audthenerd/deft_lms.git
