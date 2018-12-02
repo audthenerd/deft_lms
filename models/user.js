@@ -175,6 +175,18 @@ module.exports = (dbPoolInstance) => {
 };
 
 
+    const editSamples = (user, callback) => {
+
+        const queryString = `SELECT * FROM samples WHERE id=${user.id}`;
+
+         dbPoolInstance.query(queryString, (error, queryResult) => {
+            console.log("add equip qr", queryResult);
+
+            callback(error, queryResult);
+            });
+    };
+
+
     // const deleteSample = (user, callback) => {
 
     //     const queryString = "DELETE FROM samples WHERE";
@@ -334,6 +346,7 @@ module.exports = (dbPoolInstance) => {
         samplesPage,
         addSamples,
         getSamples,
+        editSamples,
         wrongPw,
         equipmentForm,
         addEquipment,

@@ -6,8 +6,11 @@ class samplesEdit extends React.Component {
 
   render() {
 
-      console.log("sample-props:", this.props);
+      console.log("sample-props:", this.props.samples);
       // console.log("userhome-cookie", response.cookie);
+
+
+
 
 
 
@@ -20,22 +23,22 @@ class samplesEdit extends React.Component {
           <div className="new-div">
           <form className="sample-form" method="POST" action="/lab/sint">
             <div className="sample-log">
-              <label>Customer Name</label><input className="sample" name="name" type="text" required="required" />
+              <label>Customer Name</label><input className="sample" name="name" type="text" required="required" defaultValue={this.props.samples[0].name}/>
             </div>
             <div className="sample-log">
             <label for="level-list">Sample Type</label>
                 <select className="select-level" name="type">
-                  <option value="h2so4">H<sub>2</sub>SO<sub>4</sub></option>
-                  <option value="hcl">HCL</option>
-                  <option value="ch3cooh">CH<sub>3</sub>COOH</option>
-                  <option value="h2o2">H<sub>2</sub>O<sub>2</sub></option>
+                    <option value="h2so4">H<sub>2</sub>SO<sub>4</sub></option>
+                    <option value="hcl">HCL</option>
+                    <option value="ch3cooh">CH<sub>3</sub>COOH</option>
+                    <option value="h2o2">H<sub>2</sub>O<sub>2</sub></option>
                 </select>
               </div>
             <div className="comments-log">
-              <label>Comments</label> <input className="sample" name="comments" type="text" placeholder="Type NA if no comments" required="required" />
+              <label>Comments</label> <input className="sample" name="comments" type="text" defaultValue={this.props.samples[0].comments} required="required" />
             </div>
             <div className="sample-log">
-             <input className="sample" name="user_id" type="text" required="required" defaultValue={this.props.name.id} hidden="hidden"/>
+             <input className="sample" name="user_id" type="text" required="required" defaultValue={this.props.samples[0].id} hidden="hidden"/>
             </div>
             <input className="submit" name="submit" type="submit" />
           </form>
@@ -43,7 +46,7 @@ class samplesEdit extends React.Component {
           <h2>Samples List</h2>
           <div id="samplespage-h2"></div>
           </div>
-          <script src="/script-samples.js"></script>
+          <script src="/script-samplesedit.js"></script>
     </Default>
     );
   }

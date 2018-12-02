@@ -26,7 +26,9 @@ module.exports = (app, db) => {
   app.delete('/equip/del', users.delEquipment);
   app.get('/equip/edit', users.editEquipPage);
   app.post('/equip/edit/int', users.updateEquip);
+  app.get('/sample/edit', users.editSamples);
   app.delete('/sample/del', users.delSample);
+
   app.get('/admin/home', users.assignSamples);
   app.get('/profile/:name', users.userProfile);
   app.get('/profile/:name/update', users.updateProfile);

@@ -282,9 +282,23 @@ module.exports = (db) => {
             console.log("get samples QR", queryResult);
 
             response.json(queryResult.rows);
-    });
-};
+        });
+    };
 
+
+    const editSamples = (request, response) => {
+
+      db.user.editSamples(request.query, (error, queryResult) => {
+
+        if (error) {
+          console.error('error getting user:', error);
+          response.sendStatus(500);
+        };
+            console.log("get samples QR", queryResult);
+
+            response.render('samples/samplesedit', {samples: queryResult.rows});
+        });
+    };
 
     // const deleteSample = (request, response) => {
 
@@ -474,7 +488,7 @@ module.exports = (db) => {
                 response.sendStatus(500);
             };
 
-            response.render('methods', {tests: queryResult.rows});
+            response.render('methods', {search: queryResult.rows});
         })
 
     }
@@ -495,6 +509,7 @@ module.exports = (db) => {
     samplesPage,
     addSamples,
     getSamples,
+    editSamples,
     wrongPw,
     equipmentForm,
     addEquipment,
