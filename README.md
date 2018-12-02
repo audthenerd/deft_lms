@@ -10,7 +10,7 @@ DEFT started off as a class project based on <b>React</b>, <b>Express.js</b> and
 
 ## :pencil2: Getting Started
 Try it out!
-- On us: <a href="https://deft-lms.herokuapp.com/">DEFT@Heroku</a>
+- On me: <a href="https://deft-lms.herokuapp.com/">DEFT@Heroku</a>
 - On your own: Go through the simple steps below:
 ```
 git clone https://github.com/audthenerd/deft_lms.git
@@ -20,9 +20,16 @@ node index.js
 
 ## :hammer: Build Process
 Here is a summary of the stages of building this applcation:
-
   ### Step 1: Wireframing
-  Drafting of wireframes on <a href="https://marvelapp.com/">Marvel App</a> helped the visualisation process.
+  Drafting of wireframes on <a href="https://marvelapp.com/">Marvel App</a> helped with the visualisation process. <br>
+  <img src="./images/deft-main-wf.png" width="250px" />
+  <img src="./images/deft-ws-wf.png" width="250px" />
+  <img src="./images/deft-tm-wf.png" width="250px" />
+  
+  ### Step 2: Choosing the Parameters
+  Choosing the key components that are required in a lab management system was crucial to ensure that the application would   be efficient. Here is the thought process:
+    
+  
 
 ## :phone: FAQ & Contact
 Have questions?
