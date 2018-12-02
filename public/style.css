@@ -321,5 +321,7 @@ th#method-name {
 	column-width: 300px;
 }
 
-
+.submit {
+	display: none;
+}
 

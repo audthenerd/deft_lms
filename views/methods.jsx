@@ -19,6 +19,13 @@ class methodsPage extends React.Component {
       });
 
 
+      function submitForm(event) {
+        var form = document.getElementsByClassName('search-equip')[0];
+        if (event.keyCode == 13) {
+            form.submit();
+        }
+      }
+
     return (
 
     <Default title="DEFT - Your Test Methods Library">
@@ -27,7 +34,9 @@ class methodsPage extends React.Component {
 
           <h1>Test Methods</h1>
             <div className="search-div">
-            <input className="search-bar" type="text" placeholder="Search.." />
+            <form className="search-equip" action="/lab/tests/search" >
+                <input className="search-bar" type="text" placeholder="Search.." name="name" onkeypress="submitForm(event);" />
+            </form>
             </div>
 
             <table>

@@ -32,6 +32,8 @@ module.exports = (app, db) => {
   app.get('/profile/:name/update', users.updateProfile);
   // app.post('profile/int', users.);
   app.get('/lab/tests', users.testsPage);
+  app.get('/lab/tests/search', users.searchPage);
+
   // app.get('/equip/edit', users.editEquipment);
 
 };

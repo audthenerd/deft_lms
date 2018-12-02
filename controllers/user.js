@@ -465,6 +465,19 @@ module.exports = (db) => {
         })
     };
 
+    const searchPage = (request, response) => {
+
+        db.user.searchPage(request.query, (error, queryResult) => {
+
+            if(error) {
+                console.error('error getting user:', error);
+                response.sendStatus(500);
+            };
+
+            response.render('methods', {tests: queryResult.rows});
+        })
+
+    }
 
   /**
    * ===========================================
@@ -493,6 +506,7 @@ module.exports = (db) => {
     assignSamples,
     delSample,
     testsPage,
+    searchPage,
     logOut
   };
 };

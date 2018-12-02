@@ -1,4 +1,4 @@
-let checkBox = document.getElementsByClassName('boxes');
+var checkBox = document.getElementsByClassName('boxes');
 
 window.onload = function(){
 
@@ -8,7 +8,7 @@ window.onload = function(){
 
     // listSample('samplespage-h2');
 
-    for (i in checkBox) {
+    for (let i=0; i<checkBox.length ; i++) {
 
         checkBox[i].addEventListener('click', checkedBox);
 

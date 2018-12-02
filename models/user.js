@@ -310,6 +310,20 @@ module.exports = (dbPoolInstance) => {
         });
     };
 
+    const searchPage = (user, callback) => {
+
+            console.log('search users', user);
+            let searchWord = user.name.charAt(0).toUpperCase() + user.name.slice(1);
+
+          const queryString = "SELECT * FROM tests WHERE name LIKE '%"+ searchWord + "%'";
+          console.log("WHY ERROR", queryString);
+
+          dbPoolInstance.query(queryString, (error, queryResult) => {
+            console.log("WHAT IS THE PROBLEM", queryResult);
+
+            callback(error, queryResult);
+        });
+    };
 
     return {
         create,
@@ -328,6 +342,7 @@ module.exports = (dbPoolInstance) => {
         updateEquip,
         delSample,
         assignSamples,
+        searchPage,
         testsPage
     };
 };
