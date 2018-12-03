@@ -21,6 +21,9 @@ module.exports = (db) => {
         response.redirect('/home/' + cookieName);
    };
 
+   const handleError = (request, response) => {
+        response.render('error-login');
+   }
 
    const userProfile = (request, response) => {
     let cookieName = request.cookies['username'];
@@ -75,9 +78,7 @@ module.exports = (db) => {
       // use user model method `create` to create new user entry in db
 
       // console.log(request.body);
-      db.user.create(request.body, (error, queryResult
-) => {
-
+      db.user.create(request.body, (error, queryResult) => {
 
         // queryResult of creation is not useful to us, so we ignore it
         // (console log it to see for yourself)
@@ -89,32 +90,29 @@ module.exports = (db) => {
 
           console.error('error getting user:', error);
 
-          // if (error.code === 23505) {
-          //   response.redirect('/users/new');
-          // } else {
-          response.sendStatus(500);
-        // }
-      };
-
-        if (queryResult.rowCount >= 1) {
-          console.log('User created successfully');
-
-          // drop cookies to indicate user's logged in status and username
-
-          let currentSessionCookie = sha256(request.body.name + 'logged_id' + SALT);
-
-          response.cookie('logged_in', currentSessionCookie);
-          response.cookie('username', request.body.username);
-          response.cookie('level', request.body.level);
-
+            console.log('User could not be created =(');
+            response.redirect('/error');
         } else {
 
-          console.log('User could not be created');
+            if (queryResult.rowCount >= 1) {
+                console.log('User created successfully');
 
+                  // drop cookies to indicate user's logged in status and username
+
+                  let currentSessionCookie = sha256(request.body.name + 'logged_id' + SALT);
+
+                  response.cookie('logged_in', currentSessionCookie);
+                  response.cookie('username', request.body.username);
+                  response.cookie('level', request.body.level);
+
+                  // redirect to home page after creation
+                 response.redirect('/home/'+request.body.username);
+
+            } else {
+
+                 console.log('User could not be created =((((');
+             }
         }
-
-        // redirect to home page after creation
-        response.redirect('/home/'+request.body.username);
 
       });
   };
@@ -496,6 +494,22 @@ module.exports = (db) => {
 
     }
 
+
+     const addTests = (request, response) => {
+
+        db.user.addTests(request, (error, queryResult) => {
+
+            console.log(request.body);
+            if(error) {
+                console.error('error getting user:', error);
+                response.sendStatus(500);
+            };
+
+            response.send(request.file);
+        })
+
+    }
+
   /**
    * ===========================================
    * Export controller functions as a module
@@ -525,7 +539,9 @@ module.exports = (db) => {
     delSample,
     testsPage,
     searchPage,
-    logOut
+    addTests,
+    logOut,
+    handleError
   };
 };
 

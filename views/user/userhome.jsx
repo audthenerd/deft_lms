@@ -20,7 +20,7 @@ class userHome extends React.Component {
 
         <div className="main-body">
 
-          <h1>Workspace</h1>
+          <h1 className="userhome-h1"><b>Workspace</b></h1>
                 <div id="userhome-h2">
                     <h2>Samples List</h2>
                     <button id="refresh-button">Refresh</button>

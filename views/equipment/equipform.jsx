@@ -82,7 +82,7 @@ class equipmentPage extends React.Component {
           </div>
 
           <h2>Equipment List</h2>
-            <table>
+            <table className="equipment">
 
                 <tr>
                     <th>Equipment Name</th>

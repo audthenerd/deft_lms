@@ -8,6 +8,7 @@ class methodsPage extends React.Component {
     let route = Object.keys(this.props)[1];
     let methods;
     let goBack;
+    let addMethods;
 
       console.log("methods-props:", this.props);
 
@@ -23,6 +24,34 @@ class methodsPage extends React.Component {
             );
           });
           goBack = ("");
+
+          addMethods = (
+                <div className="new-div">
+          <form className="methods-form" method="POST" enctype="multipart/form-data" action="/lab/tests/new">
+            <div className="methods-log">
+              <label>Method Name</label><input className="tests" name="name" type="text" required="required" />
+            </div>
+            <div className="methods-log">
+            <label>Description</label><input className="tests" name="test_method" type="text" required="required" />
+            </div>
+            <div className="methods-log">
+              <label>Operation Manual</label>
+              <input type="file" name="myFile" />
+              </div>
+              <div className="methods-log">
+              <label>Related Equipment</label>
+             <input className="tests" name="equipment_id" type="text" />
+            </div>
+            <div className="methods-log">
+            <label>Related Samples</label>
+             <input className="tests" name="sample_id" type="text" />
+            </div>
+            <div className="methods-log">
+             <input className="tests" name="user_id" type="text" value={this.props.id} hidden="hidden" />
+            </div>
+            <input type="submit" class="btn btn-primary" />
+          </form>
+          </div>);
         } else if (route === "search") {
             methods = this.props.search.map(item => {
             return (
@@ -36,26 +65,6 @@ class methodsPage extends React.Component {
             goBack = (<a href="/lab/tests">Back to Methods</a>);
         }
 
-        if (this.props.level < 2) {
-            addMethods = (
-                <div className="new-div">
-          <form className="methods-form" method="POST" action="/lab/tests">
-            <div className="methods-log">
-              <label>Method Name</label><input className="sample" name="name" type="text" required="required" />
-            </div>
-            <div className="methods-log">
-            <label>Serial Number</label><input className="sample" name="serial_number" type="text" required="required" />
-              </div>
-            <div className="methods-log">
-              <label>Operation Manual</label> <input className="sample" name="operation_manual" type="text" required="required" />
-            </div>
-            <div className="methods-log">
-             <input className="equipment" name="user_id" type="text" value={this.props.id} required="required" hidden="hidden" />
-            </div>
-            <input className="submit" name="submit" type="submit" />
-          </form>
-          </div>)
-        }
 
           function submitForm(event) {
             var form = document.getElementsByClassName('search-equip')[0];
@@ -78,7 +87,6 @@ class methodsPage extends React.Component {
                 <input className="search-bar" type="text" placeholder="Search.." name="name" onkeypress="submitForm(event);" />
             </form>
             </div>
-
             <table>
             <tr id="methods-header">
               <th>S/N</th>
@@ -87,8 +95,14 @@ class methodsPage extends React.Component {
             </tr>
             {methods}
             </table>
-            {goBack}
+            <p>{goBack}</p>
+
+            <div className="add-methods">
+                <h2>Add a New Test Method</h2>
+                {addMethods}
+            </div>
         </div>
+
         <script src="/script-samples.js"></script>
     </Default>
 

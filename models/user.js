@@ -331,11 +331,24 @@ module.exports = (dbPoolInstance) => {
           console.log("WHY ERROR", queryString);
 
           dbPoolInstance.query(queryString, (error, queryResult) => {
-            console.log("WHAT IS THE PROBLEM", queryResult);
 
             callback(error, queryResult);
         });
     };
+
+    const addTests = (user, callback) => {
+
+        const queryString = 'INSERT INTO tests (name, test_method, test_manual, equipment_id, sample_id, user_id) VALUES ($1, $2, $3, $4, $5, $6)';
+
+        const values = [user.name, user.test_method, user.test_manual, user.equipment_id, user.sample_id, user.user_id];
+
+        dbPoolInstance.query(queryString, values, (error, queryResult) => {
+            console.log("add equip qr", queryResult);
+
+            callback(error, queryResult);
+            });
+    };
+
 
     return {
         create,
@@ -356,6 +369,7 @@ module.exports = (dbPoolInstance) => {
         delSample,
         assignSamples,
         searchPage,
-        testsPage
+        testsPage,
+        addTests
     };
 };

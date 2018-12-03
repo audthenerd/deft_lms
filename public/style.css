@@ -1,8 +1,11 @@
 /*******************************************
 DEFAULT FOR EVERY PAGE
 *******************************************/
+
+
 .main-body, body, #myPage {
 	margin: 100px 100px !important;
+	font-family: 'IBM Plex Mono', monospace;
 	/*width: 100%;*/
 }
 
@@ -40,10 +43,7 @@ DEFAULT FOR EVERY PAGE
     margin-left: 50px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+
 
 button#toOpen {
 	border: none;
@@ -51,6 +51,7 @@ button#toOpen {
 	outline: none;
 	height: 50px;
 	cursor: pointer;
+	float: left;
 }
 
 
@@ -66,6 +67,7 @@ button#toOpen {
 /*******************************************
 NEW USER PAGE FORM
 *******************************************/
+
 
 .select-level {
 	width: 150px;
@@ -103,6 +105,7 @@ label {
 	float: right;
 	display: inline-block;
 	margin: 10px;
+	font-size: 18px;
 }
 
 .login {
@@ -125,6 +128,7 @@ TOP BAR FOR EVERY PAGE
     border: 0;
     font-size: 15px !important;
     line-height: 1.42857143 !important;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 4px;
     border-radius: 0;
 }
@@ -183,16 +187,28 @@ TOP BAR FOR EVERY PAGE
 USERHOME
 *******************************************/
 
+h1.admin-home {
+	font-weight: bold;
+}
+
 #refresh-button {
-	position: absolute;
-	top: 468px;
-   left: 506px;
+	  float: right;
+    margin-bottom: 10px;
+}
+
+div#userhome-assign {
+	border: 2px solid grey;
+	margin-bottom: 5px;
+	padding: 10px;
 }
 
 div#userhome-assign, div#userhome-h2 {
 	border: 2px solid grey;
-	margin-bottom: 5px;
+	margin-bottom: 20px;
 	padding: 10px;
+	display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 div#userhome-assign h2, div#userhome-h2 h2 {
@@ -207,7 +223,6 @@ H2 WITHIN PAGES
 
 #sample-header, #samplespage-h2, #todo-header {
 	border: 2px solid grey;
-	width: 389px;
 	float:left;
 	overflow-y: auto;
 	height: 350px;
@@ -266,12 +281,6 @@ ul {
 	left: 728px;
 }
 
-@media only screen and (max-width: 600px) {
-    #userhome-h2, #userhome-todo {
-        display: block;
-        width: 100%;
-    }
-}
 
 input.sample {
 	width: 171px;
@@ -322,4 +331,73 @@ th#method-name {
 }
 
 
+@media screen and (max-width: 450px) {
+
+	div.container {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.main-body, body, #myPage {
+    margin: 20px 20px !important;
+    display: flex;
+    flex-direction: column;
+	}
+
+	h1.admin-home {
+		font-size: 10vw;
+	}
+
+
+  .sidenav a {
+  	font-size: 5vw;
+  }
+
+  div.top-msg {
+  	margin-top: 50px;
+  }
+
+  #userhome-h2, #userhome-todo {
+        display: block;
+        width: 100%;
+	}
+
+	 div#userhome-assign, div#userhome-h2 {
+	 	margin: 5px;
+  	display: block;
+  	width: 100%;
+	}
+
+	table {
+		width: 77vw;
+		font-size: 3vw;
+	}
+
+	table.samples {
+		width: 70vw;
+		font-size: 1.5vw;
+	}
+	th#edit-col {
+	height: 12vw;
+	width: 12vw;
+	}
+
+	label.container {
+		padding-right: 0px;
+    padding-left: 0px;
+	}
+
+	table.samples td, table.equipment td {
+		padding: 4px;
+	}
+
+	table.equipment {
+		font-size: 2vw;
+	}
+
+	h2.profile {
+		margin-top: 60px;
+	}
+
+}
 

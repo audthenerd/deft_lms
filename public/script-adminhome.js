@@ -13,6 +13,10 @@ window.onload = function(){
 
 };
 
+$('#calendar').fullCalendar('option', {
+  locale: 'fr',
+  isRTL: true
+});
 
 
 function openNav() {

@@ -1,6 +1,9 @@
 module.exports = (app, db) => {
 
-  const users = require('./controllers/user')(db);
+var multer = require('multer');
+var upload = multer({ dest: './uploads/' });
+
+const users = require('./controllers/user')(db);
 
   /*
    *  =========================================
@@ -8,6 +11,7 @@ module.exports = (app, db) => {
    *  =========================================
    */
   // CRUD users
+  app.get('/error', users.handleError);
   app.get('/home/redirect', users.redirectHome);
   app.get('/users/new', users.newForm);
   app.post('/users/int', users.create);
@@ -35,6 +39,8 @@ module.exports = (app, db) => {
   // app.post('profile/int', users.);
   app.get('/lab/tests', users.testsPage);
   app.get('/lab/tests/search', users.searchPage);
+  app.post('/lab/tests/new', upload.single('myFile'));
+  app.post('/lab/tests/new', users.addTests);
 
   // app.get('/equip/edit', users.editEquipment);
 

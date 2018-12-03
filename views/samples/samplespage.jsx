@@ -96,7 +96,7 @@ class samplesPage extends React.Component {
           </div>
 
           <h2>Samples List</h2>
-            <table>
+            <table className="samples">
 
                 <tr>
                     <th>Assigned Sample ID</th>

@@ -29,7 +29,7 @@ class profilePage extends React.Component {
 
     <Default title="DEFT - User Profile">
 
-      <h2>{this.props.user.name.charAt(0).toUpperCase() + this.props.user.name.slice(1)}'s Profile</h2>
+      <h2 className="profile">{this.props.user.name.charAt(0).toUpperCase() + this.props.user.name.slice(1)}'s Profile</h2>
 
       <p>Name: {this.props.user.name}</p>
       <p>Access Level: {this.props.user.level}</p>

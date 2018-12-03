@@ -27,7 +27,13 @@ class adminHome extends React.Component {
 
         <div className="main-body">
 
-          <h1>Workspace</h1>
+          <h1 className="admin-home">Administrator Workspace</h1>
+          <div id="userhome-h2">
+            <h2>Samples List</h2>
+            <button id="refresh-button">Refresh</button>
+            <div id="sample-header"></div>
+        </div>
+            <div id='calendar'></div>
             <div id="userhome-assign">
               <h2>Assign Tasks</h2>
               <div id="assign-header"></div>
@@ -64,11 +70,6 @@ class adminHome extends React.Component {
                   </form>
                   </div>
 
-            </div>
-            <div id="userhome-h2">
-              <h2>Samples List</h2>
-                  <button id="refresh-button">Refresh</button>
-                <div id="sample-header"></div>
             </div>
 
         </div>

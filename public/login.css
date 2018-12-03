@@ -30,10 +30,12 @@ div.container {
 .main-body {
 	margin: 60px 150px;
 	padding-top: 53px;
+	font-size: 18px;
 }
 
 h2{
 	margin-bottom: 23px;
+	font-size: 40px;
 }
 
 .main-img, .main-img img {
@@ -45,4 +47,31 @@ h2{
 
 input.field, select.select-level {
 	margin-left: 10px;
+}
+
+@media screen and (max-width: 450px) {
+
+h1.deft-header {
+	font-size: 12vw;
+}
+
+.main-body {
+	margin: 60px 60px;
+	padding-top: 20px;
+	font-size: 5vw;
+	}
+
+
+.main-img img {
+	top: 163px;
+}
+
+h2{
+	margin-bottom: 23px;
+	font-size: 8vw;
+	 width: 104%;
+}
+
+
+
 }
