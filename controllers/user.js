@@ -466,6 +466,9 @@ module.exports = (db) => {
 
     const testsPage = (request, response) => {
 
+        let cookieName = request.cookies['username'];
+        let cookieId = request.cookies['id'];
+        let cookieLevel = request.cookies['level'];
 
         db.user.testsPage(request.body, (error, queryResult) => {
 
@@ -475,7 +478,7 @@ module.exports = (db) => {
 
             };
 
-                response.render('methods', {tests: queryResult.rows});
+                response.render('methods', {tests: queryResult.rows, name: cookieName, id: cookieId, level: cookieLevel});
         })
     };
 

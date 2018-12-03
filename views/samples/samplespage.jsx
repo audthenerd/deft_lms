@@ -86,7 +86,7 @@ class samplesPage extends React.Component {
               <label>Comments</label> <input className="sample" name="comments" type="text" placeholder="Type NA if no comments" required="required" />
             </div>
             <div className="sample-log">
-             <input className="sample" name="user_id" type="text" required="required" defaultValue={this.props.id} hidden="hidden" />
+             <input className="sample" name="user_id" type="text" defaultValue={this.props.id} hidden="hidden" />
             </div>
             <div className="sample-log">
             <label>Login Date</label> <input className="sample" name="date_logged" type="text" defaultValue={dateNow} readonly="readonly" />

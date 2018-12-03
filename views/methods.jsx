@@ -9,7 +9,7 @@ class methodsPage extends React.Component {
     let methods;
     let goBack;
 
-      console.log("methods-props:", Object.keys(this.props));
+      console.log("methods-props:", this.props);
 
 
       if (route === "tests") {
@@ -36,6 +36,26 @@ class methodsPage extends React.Component {
             goBack = (<a href="/lab/tests">Back to Methods</a>);
         }
 
+        if (this.props.level < 2) {
+            addMethods = (
+                <div className="new-div">
+          <form className="methods-form" method="POST" action="/lab/tests">
+            <div className="methods-log">
+              <label>Method Name</label><input className="sample" name="name" type="text" required="required" />
+            </div>
+            <div className="methods-log">
+            <label>Serial Number</label><input className="sample" name="serial_number" type="text" required="required" />
+              </div>
+            <div className="methods-log">
+              <label>Operation Manual</label> <input className="sample" name="operation_manual" type="text" required="required" />
+            </div>
+            <div className="methods-log">
+             <input className="equipment" name="user_id" type="text" value={this.props.id} required="required" hidden="hidden" />
+            </div>
+            <input className="submit" name="submit" type="submit" />
+          </form>
+          </div>)
+        }
 
           function submitForm(event) {
             var form = document.getElementsByClassName('search-equip')[0];
