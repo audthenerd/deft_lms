@@ -19,7 +19,7 @@ node index.js
 ```
 
 ## :hammer: Build Process
-Here is a summary of the stages of building this applcation:
+Here is a summary of the stages of building this application:
   ### Step 1: Wireframing
   Drafting of wireframes on <a href="https://marvelapp.com/">Marvel App</a> helped with the visualisation process. <br>
   <img src="./images/deft-main-wf.png" width="250px" />
