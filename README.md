@@ -27,9 +27,12 @@ Here is a summary of the stages of building this applcation:
   <img src="./images/deft-tm-wf.png" width="250px" />
   
   ### Step 2: Choosing the Parameters
-  Choosing the key components that are required in a lab management system was crucial to ensure that the application would   be efficient. Here is the thought process:
-    
-  
+  Choosing the key components that are required in a lab management system was crucial to ensure that the application would   be efficient and controlled for traceability. Here is a list of them:<br>
+  - <b>Permission Control</b>: Currently has 3 levels (Supervisor/Administrator, Chemist, Technician). Can be altered            according to the lab's hierachy. This controls who is able to access what.<br>
+  - <b>Samples</b>: Add new samples, edit existing samples <br>
+  - <b>Equipment</b>: Add new equipment, edit existing equipment <br>
+  - <b>Test Methods</b>: Add new methods, edit existing methods, search for methods <br>
+  - <b>Reports</b>: Generate reports from sample analysis results entered by the lab staff - WIP
 
 ## :phone: FAQ & Contact
 Have questions?
