@@ -208,7 +208,7 @@ div#userhome-assign, div#userhome-h2 {
 	padding: 10px;
 	display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
 }
 
 div#userhome-assign h2, div#userhome-h2 h2 {
