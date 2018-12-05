@@ -36,7 +36,7 @@ function listSample(item) {
 
 
 
-    var ajaxUrl = "http://localhost:3000/lab/sint";
+    var ajaxUrl = "/lab/sint";
 
     var responseHandler = function() {
     console.log("response text", this.responseText);
