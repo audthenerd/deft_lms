@@ -13,11 +13,6 @@ window.onload = function(){
 
 };
 
-$('#calendar').fullCalendar('option', {
-  locale: 'fr',
-  isRTL: true
-});
-
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
