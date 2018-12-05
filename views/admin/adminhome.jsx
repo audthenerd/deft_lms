@@ -33,7 +33,6 @@ class adminHome extends React.Component {
             <button id="refresh-button">Refresh</button>
             <div id="sample-header"></div>
         </div>
-            <div id='calendar'></div>
             <div id="userhome-assign">
               <h2>Assign Tasks</h2>
               <div id="assign-header"></div>

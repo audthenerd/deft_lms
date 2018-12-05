@@ -27,6 +27,7 @@ class methodsPage extends React.Component {
 
           addMethods = (
                 <div className="new-div">
+                <h2>Add a New Test Method</h2>
           <form className="methods-form" method="POST" enctype="multipart/form-data" action="/lab/tests/new">
             <div className="methods-log">
               <label>Method Name</label><input className="tests" name="name" type="text" required="required" />
@@ -98,7 +99,6 @@ class methodsPage extends React.Component {
             <p>{goBack}</p>
 
             <div className="add-methods">
-                <h2>Add a New Test Method</h2>
                 {addMethods}
             </div>
         </div>

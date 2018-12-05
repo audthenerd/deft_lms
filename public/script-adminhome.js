@@ -22,16 +22,19 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 };
 
-function refreshSamples() {
-
-    let uList = document.getElementById('sample-unordered');
-    uList.parentNode.removeChild(uList);
-
-    listSample('sample-header');
-};
-
 
 function listSample(item) {
+
+
+    var sampleList = document.createElement('div');
+    sampleList.setAttribute('id', 'sample-list');
+    document.getElementById(item).appendChild(sampleList);
+
+    var linkHeader = document.createElement('ul');
+    linkHeader.setAttribute('id', 'sample-unordered')
+    sampleList.appendChild(linkHeader);
+
+
 
     var ajaxUrl = "http://localhost:3000/lab/sint";
 
@@ -42,14 +45,6 @@ function listSample(item) {
 
       var responseObj = JSON.parse(this.responseText);
       // console.log(responseObj);
-
-    var sampleList = document.createElement('div');
-    sampleList.setAttribute('id', 'sample-list');
-    document.getElementById(item).appendChild(sampleList);
-
-    var linkHeader = document.createElement('ul');
-    linkHeader.setAttribute('id', 'sample-unordered')
-    sampleList.appendChild(linkHeader);
 
 
     console.log(responseObj['keys']);
@@ -89,13 +84,13 @@ function listSample(item) {
 
 };
 
+function refreshSamples() {
 
+    let uList = document.getElementById('sample-unordered');
+    uList.parentNode.removeChild(uList);
 
-
-
-
-
-
+    listSample('sample-header');
+};
 
 
 
